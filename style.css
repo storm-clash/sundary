@@ -22,7 +22,6 @@
 */
 *, *::before, *::after {
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 /*
     2. Remove default margin
@@ -270,3 +269,53 @@ transform-origin: top left;
     }
     /* Additional styles can be added as needed */
 }
+
+@media only screen and (max-width: 471px) {
+    /* Styles for mobile devices */
+    .card {
+        width: 90%; /* Adjust card width for mobile */
+        height: 95%; /* Allow height to adjust */
+        padding: 1rem; /* Add padding for better spacing */
+        flex-direction: column;
+    }
+
+    .left_side, .right_side {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements */
+        height: 100%;
+    }
+
+    .info_Container {
+        width: 100%; /* Full width on mobile */
+        height: 100%;
+    }
+
+    .flex-row {
+        flex-direction: column; /* Stack label and input vertically */
+        align-items: flex-start; /* Align items to start */
+        height: 100%;
+    }
+
+    input {
+        width: 100%; /* Make inputs full width */
+        margin-bottom: 0.5rem; /* Add space between inputs */
+    }
+
+    svg {
+        max-width: 80%; /* Adjust size of SVG for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    button {
+        width: 100%; /* Make button full width */
+        margin-top: 1rem; /* Space above button */
+    }
+
+    .upload-label {
+        width: 100%; /* Full width label */
+        text-align: center; /* Center label text */
+    }
+    
+
+}
+
