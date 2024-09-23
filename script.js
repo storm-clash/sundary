@@ -104,8 +104,8 @@ barcodeInput.addEventListener('input', function() {
     const pageHeight = pdf.internal.pageSize.getHeight();
 
     // Calculate positions to center the card and barcode inside the card
-    const cardWidth = cardCanvas.width * 0.3; // 30% of the original size
-    const cardHeight = cardCanvas.height * 0.3;
+    const cardWidth = cardCanvas.width * 0.25; // 30% of the original size
+    const cardHeight = cardCanvas.height * 0.25;
     const cardX = (pageWidth - cardWidth) / 2;
     const cardY = (pageHeight - cardHeight) / 2;
 
