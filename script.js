@@ -95,7 +95,7 @@ barcodeInput.addEventListener('input', function() {
     // Create the PDF
     const pdf = new jsPDF({
         orientation: 'portrait',
-        unit: 'rem',
+        unit: 'mm',
         format: 'a4' // A4 paper size
     });
 
