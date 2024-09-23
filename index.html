@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.0/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="triangle"></div>
+    
+        <section class="card">
+            <div class="left_side">
+                <picture>
+                    <img src="assets/sundaryLogo.png" alt="Lotus House Logo"/>
+                </picture>
+                <div class="info_Container">
+                    <div class="flex-row">
+                        <label>Location:</label>
+                        <input>
+                    </div>
+                    <div class="flex-row">
+                        <label>Name:</label>
+                        <input id="card_Name">
+                    </div>
+                    <div class="flex-row">
+                        <label>Position:</label>
+                        <input>
+                    </div>
+                    <div class="flex-row">
+                        <label>Department:</label>
+                        <input>
+                    </div>
+                    <div class="flex-row">
+                        <label>Client ID:</label>
+                        <input id="barcode_Input">
+                    </div>
+                </div>
+                
+
+            </div>
+             <div class="right_side">
+                <div class="upload-container">
+                    <img id="imagePreview" style=" display: none;">
+                   
+                    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                  </div>
+                  <label for="imageInput" class="upload-label">Click to Upload Image</label>
+                  
+             </div>   
+             <svg id="barcode"></svg>
+            
+        </section>
+    
+            <button id="save">Save</button>
+</body>
+<script defer src="script.js"></script>
+</html>

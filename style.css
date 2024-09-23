@@ -1,0 +1,269 @@
+:root {
+    --clr-primary-400: hsl(158, 36%, 37%);
+    --clr-secondary-200: hsl(30, 38%, 92%);
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-shadow:rgba(119, 191, 233, 0.432);
+    --white:#ffffff;
+    --lotus-pink:#FFD3DA;
+    --light-grey: #e0dddd;
+    --primary-color: rgb(0, 105, 255);
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --ff-accent: "Fraunces", serif;
+    --ff-base: "Montserrat", sans-serif;
+}
+
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+
+html, body {
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    color: var(--clr-neutral-400);
+    background-color: var(--white);
+    max-width:100vw;
+    margin:0 .5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.triangle {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: var(--lotus-pink);
+transform: rotate(45deg);
+transform-origin: top left;
+}
+
+.card {
+    width: 60%;
+    height: 60%;
+    z-index: 2;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    background-color: var(--white);
+    border-radius: .5rem;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    padding: .5rem;
+}
+.left_side{
+    flex:1 0 60%;
+    display: flex;
+    gap: .3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: .3rem;
+}
+
+.right_side {
+    flex:1 0 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 95%;
+    border: 2px dashed #ccc;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 1rem;
+  }
+  
+  .upload-label {
+    padding: 10px 20px;
+    background-color: #006E90;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* Space above the label */
+    transition: all .6s ease;
+    box-sizing: border-box;
+  }
+  
+  .upload-label:hover {
+    background-color: var(--white);
+    border: 1px solid #006E90;
+    color:#006E90;
+  }
+
+  #imagePreview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the box */
+    display: none; /* Initially hidden */
+  }
+  
+  .info_Container{
+    display: flex;
+    flex-direction: column;
+    padding: .3rem;
+    width: 100%;
+    height: 75%;
+  }
+  .flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    box-sizing: border-box;
+    padding: .2rem;
+    
+  }
+  .info_Container label {
+    flex: 1 0 20%;
+    line-height: 1.5;
+    padding: .2rem 0;
+  }
+  .info_Container label::after {
+    content: '*';
+    color: red;
+    margin-left: .25rem;
+  }
+  input {
+    flex: 1 0 70%;
+    border-radius: .5rem;
+    height: 2.2rem;
+    outline: none;
+    border: 1px solid var(--lotus-pink);
+  }
+
+  svg {
+    position: absolute;
+    bottom: 40px;
+    left: 27%;
+    border-radius: .5rem;
+    height: 50px;
+    max-width: 50%;
+  }
+
+  button {
+    position: absolute;
+    bottom: 10%;
+    right: 30%;
+    padding: .2rem 2rem;
+    border-radius: .5rem;
+    border:none;
+    background-color: #006E90;
+    color:var(--white);
+    cursor: pointer;
+    transition: all .6s ease;
+  }
+
+  button:hover {
+    background-color: var(--white);
+    border: 1px solid #006E90;
+    color:#006E90;
+  }
+
+  
+
+  /* Existing styles here... */
+
+/* Print Styles */
+@media print {
+    body {
+        max-width: none; /* Allow full width */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+    }
+
+    .card {
+        width: 100%; /* Use full width for print */
+        height: auto; /* Allow height to adjust */
+        box-shadow: none; /* Remove shadow for print */
+        page-break-inside: avoid; /* Avoid breaking inside the card */
+        border: 1px solid black;
+    }
+
+    .triangle {
+        display: none; /* Hide the triangle background */
+    }
+
+    #imagePreview {
+        display: block; /* Show the image in print */
+    }
+
+    button, .upload-label {
+        display: none; /* Hide buttons and upload labels */
+    }
+
+    svg {
+        display: block; /* Ensure barcode is visible */
+    }
+    input {
+        border: none;
+    }
+    /* Additional styles can be added as needed */
+}
