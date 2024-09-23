@@ -109,10 +109,10 @@ barcodeInput.addEventListener('input', function() {
     const cardX = (pageWidth - cardWidth) / 2;
     const cardY = (pageHeight - cardHeight) / 2;
 
-    const barcodeWidth = 60; // Set smaller width for the barcode
-    const barcodeHeight = 20; // Set smaller height for the barcode
+    const barcodeWidth = 40; // Set smaller width for the barcode
+    const barcodeHeight = 15; // Set smaller height for the barcode
     const barcodeX = cardX + (cardWidth - barcodeWidth) / 2; // Center the barcode within the card horizontally
-    const barcodeY = cardY + cardHeight - 25; // Place it near the bottom of the card
+    const barcodeY = cardY + cardHeight - 20; // Place it near the bottom of the card
 
     // Add the captured card image to the PDF
     pdf.addImage(cardImage, 'PNG', cardX, cardY, cardWidth, cardHeight);
