@@ -98,8 +98,8 @@ transform-origin: top left;
 }
 
 .card {
-    width: 60%;
-    height: 65%;
+    width: 650px;
+    height: 400px;
     z-index: 2;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     background-color: var(--white);
