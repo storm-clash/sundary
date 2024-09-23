@@ -201,7 +201,7 @@ transform-origin: top left;
 
   svg {
     position: absolute;
-    bottom: 40px;
+    bottom: 10px;
     left: 27%;
     border-radius: .5rem;
     height: 50px;
