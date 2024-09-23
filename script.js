@@ -84,7 +84,7 @@ barcodeInput.addEventListener('input', function() {
 
     // Capture the card as a PNG using html2canvas
     const cardCanvas = await html2canvas(card, {
-        scale: 2, // Increase resolution for better quality
+        scale: 1.5, // Increase resolution for better quality
         useCORS: true // Allow external resources
     });
 
