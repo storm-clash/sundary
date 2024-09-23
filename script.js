@@ -84,7 +84,7 @@ barcodeInput.addEventListener('input', function() {
 
     // Capture the card as a PNG using html2canvas
     const cardCanvas = await html2canvas(card, {
-        scale: 1.5, // Increase resolution for better quality
+        scale: 2, // Increase resolution for better quality
         useCORS: true // Allow external resources
     });
 
@@ -104,8 +104,8 @@ barcodeInput.addEventListener('input', function() {
     const pageHeight = pdf.internal.pageSize.getHeight();
 
     // Calculate positions to center the card and barcode inside the card
-    const cardWidth = cardCanvas.width * 0.2; // 30% of the original size
-    const cardHeight = cardCanvas.height * 0.2;
+    const cardWidth = cardCanvas.width * 0.3; // 30% of the original size
+    const cardHeight = cardCanvas.height * 0.3;
     const cardX = (pageWidth - cardWidth) / 2;
     const cardY = (pageHeight - cardHeight) / 2;
 
